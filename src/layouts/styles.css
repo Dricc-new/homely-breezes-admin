@@ -1,0 +1,98 @@
+.auth-layout,
+.admin-layout {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-layout>main,
+.admin-layout>main {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.admin-layout>aside {
+    background-color: var(--adminlayout-aside-color);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-layout>aside>.logo {
+    display: flex;
+    justify-content: center;
+    padding-inline: var(--adminlayout-aside-logo-padding-x);
+    padding-block: var(--adminlayout-aside-logo-padding-y);
+}
+
+.admin-layout>aside>nav>button {
+    margin: var(--adminlayout-aside-nav-button-margin);
+    width: var(--adminlayout-aside-nav-button-size);
+    height: var(--adminlayout-aside-nav-button-size);
+}
+
+.admin-layout>aside>nav menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--adminlayout-aside-nav-menu-gap);
+    padding: var(--adminlayout-aside-nav-menu-padding);
+}
+
+.admin-layout>aside>nav menu menu a {
+    padding-left: var(--adminlayout-aside-nav-menu-menu-padding);
+    width: 100%;
+}
+
+.admin-layout .file-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-layout .file-input .drag-area {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #00000080;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+
+@media not all and (min-width: 640px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-layout>aside {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .admin-layout>aside>nav>menu {
+        position: absolute;
+        z-index: 9999;
+        top: var(--adminlayout-aside-nav-menu-top);
+        left: var(--adminlayout-aside-nav-menu-margin-x);
+        right: var(--adminlayout-aside-nav-menu-margin-x);
+        background: var(--adminlayout-aside-nav-menu-bg-color);
+    }
+}
+
+@media (min-width: 640px) {
+    .admin-layout>aside {
+        width: var(--adminlayout-aside-width);
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .admin-layout>aside>nav>button {
+        display: none;
+    }
+}

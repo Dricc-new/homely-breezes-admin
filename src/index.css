@@ -1,0 +1,15 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-color {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #0e4ed8, #38d2f8, #7a0bad);
+}
+
+.p-column-title{
+    color: #7a0bad;
+}
