@@ -15,20 +15,25 @@ export class PasswordInput extends React.Component<TypeInputProps & { inputMode?
 
     public render() {
         const { value, onChange, className, label, name, inputMode } = this.props
+        const type = this.state.type
 
-        return <div className="input">
+        return <div className="input password">
             <label htmlFor={this.id}>{label}</label>
             <div className="flex relative items-center">
                 <input
-                    className={className}
+                    className={`${className}`}
                     value={value}
                     onChange={(e) => { if (onChange) onChange(e) }}
                     id={this.id}
                     name={name}
                     inputMode={inputMode}
-                    type="password"
+                    type={type}
                 />
-                <i className="absolute fa fa-eye right-2"></i>
+                <button onClick={() => this.setState({ type: type === 'text' ? 'password' : 'text' })} className="absolute w-5 right-2">
+                    {type === 'text' && <i className="fa fa-eye" />}
+                    {type === 'password' && <i className="fa fa-eye-slash" />}
+                </button>
+
             </div>
         </div>
     }

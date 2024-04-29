@@ -1,6 +1,6 @@
 import React from "react";
 import { AdminLayoutProps } from "./interfaces";
-import './styles.css'
+import '../styles.css'
 import { Links } from "./links";
 
 export class AdminLayout extends React.Component<AdminLayoutProps> {

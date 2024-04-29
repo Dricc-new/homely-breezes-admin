@@ -1,7 +1,7 @@
 import { PasswordInput } from '../../components/PasswordInput'
 import { TextInput } from '../../components/TextInput'
-import '../../layouts/AdminLayout/styles.css'
-import '../../layouts/AdminLayout/theme-default.css'
+import '../../layouts/styles.css'
+import '../../layouts/theme-default.css'
 export function RegisterView() {
     return <>
         <div className="logo flex justify-center mb-4">

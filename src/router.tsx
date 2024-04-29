@@ -7,6 +7,10 @@ import { RoomsView } from "./views/Rooms";
 import { EditRoomView } from "./views/Rooms/EditRoomView";
 import { LoginView } from "./views/Auth/LoginView";
 import { RegisterView } from "./views/Auth/RegisterView";
+import { FoodsView } from "./views/Foods";
+import { EditFoodView } from "./views/Foods/EditFoodView";
+import { OffersView } from "./views/Offers";
+import { EditOfferView } from "./views/Offers/EditOfferView";
 // import { blogNavLinks, blogRoutes } from "./modules/Blog/routes";
 
 const nav: TypeNavLinks[] = [
@@ -39,6 +43,15 @@ const router = createBrowserRouter([
             // Rooms
             { path: "/rooms", element: <RoomsView /> },
             { path: "/rooms/:id", element: <EditRoomView /> },
+
+            // Foods
+            { path: "/foods", element: <FoodsView /> },
+            { path: "/foods/:id", element: <EditFoodView /> },
+
+            // Offers
+            { path: "/offers", element: <OffersView /> },
+            { path: "/offers/:id", element: <EditOfferView /> },
+
         ]
     },
     {

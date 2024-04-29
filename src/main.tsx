@@ -1,6 +1,6 @@
 import 'primeicons/primeicons.css';
 import './index.css'
-import './layouts/AdminLayout/theme-default.css'
+import './layouts/theme-default.css'
 import "primereact/resources/themes/viva-dark/theme.css";
 
 import React from 'react'
