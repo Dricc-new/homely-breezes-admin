@@ -1,7 +1,8 @@
 export interface TypeInputProps {
     label?: string;
     name?: string;
-    value?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    value?: string|any;
     onChange?: CallableFunction;
     className?: string;
     placeholder?: string;

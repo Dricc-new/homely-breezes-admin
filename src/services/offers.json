@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+        "title": "Deluxe Room",
+        "img": "/vite.svg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, illo? Iure hic atque fugit dolores sit odio consectetur quaerat quos aut cumque consequuntur earum, doloribus neque dolorum ipsam, libero deserunt.",
+        "state": "draft"
+    },
+    {
+        "id": "2",
+        "title": "Deluxe Room",
+        "img": "/vite.svg",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, illo? Iure hic atque fugit dolores sit odio consectetur quaerat quos aut cumque consequuntur earum, doloribus neque dolorum ipsam, libero deserunt.",
+        "state": "published"
+    }
+]

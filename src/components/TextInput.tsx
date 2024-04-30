@@ -4,7 +4,7 @@ import { TypeInputProps } from "./interfaces";
 export class TextInput extends React.Component<TypeInputProps & { type?: string }> {
     public id: string
     constructor(props: TypeInputProps & { type?: string }) {
-        super({ ...props, type: props.type ? props.type : 'text' })
+        super(props)
         this.id = 'id-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
     }
 
@@ -18,7 +18,7 @@ export class TextInput extends React.Component<TypeInputProps & { type?: string 
                 onChange={(e) => { if (onChange) onChange(e) }}
                 id={this.id}
                 name={name}
-                type={type}
+                type={type || "text"}
             />
         </div>
     }

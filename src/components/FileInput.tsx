@@ -7,6 +7,7 @@ interface TypeProps extends TypeInputProps {
     multiple?: boolean;
     className?: string;
     accept?: string;
+    value?: string | File| File[];
 }
 
 export class FileInput extends React.Component<TypeProps> {

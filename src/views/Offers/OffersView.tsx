@@ -1,9 +1,12 @@
 import { Column } from "primereact/column";
 import { PublishState } from "../../components/PublishState/PublishState";
 import { editItemTableButton, ImageItemTable, SecctionIndex } from "../../layouts/SecctionIdexLayout";
-import { offers } from "../../services/collections.services";
+import { TLoaderOffers } from "./loaders";
+import { useLoaderData } from "react-router-dom";
 
 export function OffersView() {
+    const { offers } = useLoaderData() as TLoaderOffers
+
     return <SecctionIndex value={offers} title="Offers" urlNewItem="/offers/new" titleNewButton="New Offer">
         <Column field="id" header="ID"></Column>
         <Column field="title" header="Title" />

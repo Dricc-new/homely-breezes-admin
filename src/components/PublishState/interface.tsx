@@ -1,3 +1,4 @@
 export enum EPublishState {
-    Draft = 'Draft', Publish = 'Published'
+    Draft = 'draft',
+    Publish = 'published'
 }

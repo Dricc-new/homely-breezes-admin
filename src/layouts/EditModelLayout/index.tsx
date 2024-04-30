@@ -1,6 +1,7 @@
 import { ButtonBack } from "../../components/ButtonBack";
 interface TEditModelLayout {
-    children: JSX.Element | JSX.Element[]
+    children: JSX.Element | JSX.Element[];
+    save?: CallableFunction
 }
 
 export function EditModelLayout(props: TEditModelLayout) {
@@ -20,7 +21,7 @@ export function EditModelLayout(props: TEditModelLayout) {
                     <h1 className="flex text-sm justify-between">Update At <span>Now</span></h1>
                 </div>
                 <button className="rounded py-1 hover:bg-opacity-70 button">Publish</button>
-                <button className="bg-blue-500 rounded py-1 hover:bg-opacity-70 button-save">Save</button>
+                <button onClick={() => { if (props.save) props.save() }} className="bg-blue-500 rounded py-1 hover:bg-opacity-70 button-save">Save</button>
             </div>
         </section>
     </>
